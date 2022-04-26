@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "ae9c5c5a-9941-4915-8dcb-12da876912bf",
+		"name": "Posts Mongoose kata - heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有 Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://arcane-headland-13843.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"arcane-headland-13843",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tom\",\n    \"tags\": \"心情\",\n    \"type\": \"person\",\n    \"content\": \"今天的心情灰灰的\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://arcane-headland-13843.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"arcane-headland-13843",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新單筆 Post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mary\",\n    \"tags\": \"教育\",\n    \"type\": \"group\",\n    \"content\": \"一起來學習瑜伽吧\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://arcane-headland-13843.herokuapp.com/posts/1234",
+					"protocol": "https",
+					"host": [
+						"arcane-headland-13843",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有 Posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://arcane-headland-13843.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"arcane-headland-13843",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆 Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://arcane-headland-13843.herokuapp.com/posts/1234",
+					"protocol": "https",
+					"host": [
+						"arcane-headland-13843",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
