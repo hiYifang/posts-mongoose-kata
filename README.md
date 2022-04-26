@@ -9,9 +9,9 @@
 - headers
 - handles：successHandle、errHandle、notFoundHandle
 - server.js
-- models/todo.js：定義 Schema
+- models/posts.js：定義 Schema
 - config.env：PORT、DATABASE、DATABASE_PASSWORD
-- .gitignore：node_modules/、*.env
+- .gitignore：node_modules、*.env
 - package.json：部署 Heroku(檢查 npm start 所運行檔案、加入 Node.js 運行的版本號)
 
 #### 監聽 port
