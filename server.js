@@ -76,7 +76,6 @@ const reqListener = async (req, res) => {
         } else {
           const postId = url.split('/').pop();
           const editPost = await Post.findById(postId).exec();
-          console.log(editPost);
           if (editPost) {
             await Post.findByIdAndUpdate(postId, {
               name,
