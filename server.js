@@ -54,10 +54,16 @@ const reqListener = async (req, res) => {
   } else if (url.startsWith('/posts/') && method === 'DELETE') {
     try {
       const postId = url.split('/').pop();
-      await Post.findByIdAndDelete(postId);
-      successHandle(res, '刪除資料成功');
+      const delPost = await Post.findById(postId).exec();
+      if (delPost) {
+        await Post.findByIdAndDelete(postId);
+        successHandle(res, '刪除資料成功');
+      } else {
+        errorHandle(res, '刪除資料失敗，無此 ID');
+      }
+
     } catch {
-      errorHandle(res, '刪除資料失敗，無此 ID');
+      errorHandle(res, err.message);
     }
   } else if (url.startsWith('/posts/') && method === 'PATCH') {
     req.on('data', async () => {
